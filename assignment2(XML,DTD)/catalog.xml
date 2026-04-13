@@ -1,0 +1,52 @@
+<!DOCTYPE university SYSTEM "catalog.dtd">
+
+<university>
+
+    <university_name>Sanjivani University</university_name>
+    <address>Kopargaon</address>
+
+    <department>
+        <dept_name>Computer Science</dept_name>
+
+        <faculty>
+            <faculty_name>Dr. Brahmne Sir</faculty_name>
+            <designation></designation>
+            <email>sharma@abc.edu</email>
+        </faculty>
+
+        <faculty>
+            <faculty_name>Ms. Patil</faculty_name>
+            <designation>Assistant Professor</designation>
+            <email>patil@abc.edu</email>
+        </faculty>
+
+        <course>
+            <course_title>Data Structures</course_title>
+            <course_code>CS101</course_code>
+            <credits>4</credits>
+            <semester>3</semester>
+        </course>
+
+        <course>
+            <course_title>Algorithms</course_title>
+            <course_code>CS102</course_code>
+            <credits>4</credits>
+            <semester>4</semester>
+        </course>
+    </department>
+
+    <student>
+        <student_name>Rahul Patil</student_name>
+        <roll_no>1</roll_no>
+        <department_name>Computer Science</department_name>
+        <enrolled_courses>CS101, CS102</enrolled_courses>
+    </student>
+
+    <student>
+        <student_name>Anita Desai</student_name>
+        <roll_no>2</roll_no>
+        <department_name>Computer Science</department_name>
+        <enrolled_courses>CS102</enrolled_courses>
+    </student>
+
+</university>

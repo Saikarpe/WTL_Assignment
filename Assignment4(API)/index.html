@@ -1,0 +1,54 @@
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>API calling</title>
+            <style>
+                table {
+                    border: 2px solid black;
+                }
+                th,
+                td {
+                    border: 1px solid black;
+                    padding: 8px;
+                }
+            </style>
+        </head>
+
+        <body>
+            <div id="divid"></div>
+            <button id="btn1">Show Data</button>
+            <script>
+                
+                document.getElementById("btn1").addEventListener("click", async () => {
+                    let obj = await fetch("https://jsonplaceholder.typicode.com/posts");
+                    let data = await obj.json();
+                    console.log(data);
+
+                    let table = document.createElement("table");
+                    let row1 = document.createElement("tr");
+                    for (let key in data[0]) {
+                        let cell1 = document.createElement("th");
+                        cell1.innerText = key;
+                        row1.appendChild(cell1);
+                    }
+                    table.appendChild(row1);
+                    document.body.appendChild(table)
+                    for (let i = 0; i < data.length; i++) {
+                        let row = document.createElement("tr");
+                        for (let key in data[i]) {
+                            let td = document.createElement("td");
+                            td.innerText = data[i][key];
+                            row.appendChild(td);
+                        }
+                        table.appendChild(row);
+                    }
+                    document.body.appendChild(table);
+                });
+            </script>
+
+        </body>
+
+        </html>

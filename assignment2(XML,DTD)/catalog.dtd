@@ -1,0 +1,24 @@
+<!ELEMENT university (university_name, address, department+, student+)>
+
+<!ELEMENT university_name (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+
+<!ELEMENT department (dept_name, faculty+, course+)>
+<!ELEMENT dept_name (#PCDATA)>
+
+<!ELEMENT faculty (faculty_name, designation, email)>
+<!ELEMENT faculty_name (#PCDATA)>
+<!ELEMENT designation (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!ELEMENT course (course_title, course_code, credits, semester)>
+<!ELEMENT course_title (#PCDATA)>
+<!ELEMENT course_code (#PCDATA)>
+<!ELEMENT credits (#PCDATA)>
+<!ELEMENT semester (#PCDATA)>
+
+<!ELEMENT student (student_name, roll_no, department_name, enrolled_courses)>
+<!ELEMENT student_name (#PCDATA)>
+<!ELEMENT roll_no (#PCDATA)>
+<!ELEMENT department_name (#PCDATA)>
+<!ELEMENT enrolled_courses (#PCDATA)>

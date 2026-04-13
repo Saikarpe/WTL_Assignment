@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+    body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:white;
+}
+
+.calculator{
+    width:260px;
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:black;
+}
+
+#display{
+    height:50px;
+    border:5px solid black;
+    margin-bottom:10px;
+    padding:10px;
+    font-size:20px;
+    text-align:right;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+button{
+    flex:1 0 22%;
+    height:45px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+</style>
+</head>
+<body>
+     <div class="calculator">
+
+        <div id="display"></div>
+
+        <div class="buttons">
+
+            <button id="btn7">7</button>
+            <button id="btn8">8</button>
+            <button id="btn9">9</button>
+            <button id="div">/</button>
+
+            <button id="btn4">4</button>
+            <button id="btn5">5</button>
+            <button id="btn6">6</button>
+            <button id="mul">*</button>
+
+            <button id="btn1">1</button>
+            <button id="btn2">2</button>
+            <button id="btn3">3</button>
+            <button id="sub">-</button>
+
+            <button id="btn0">0</button>
+            <button id="add">+</button>
+            <button id="equal">=</button>
+            <button id="clear">C</button>
+            <button id="zero">0</button>
+            <button id="delete">del</button>
+
+        </div>
+
+    </div>
+
+    <script>
+
+let display = document.getElementById("display");
+let expression = "";
+
+document.getElementById("btn0").addEventListener("click", ()=>{
+    expression += "0";
+    display.innerText = expression;
+});
+
+document.getElementById("btn1").addEventListener("click",()=>{
+    expression += "1";
+    display.innerText = expression;
+});
+
+document.getElementById("btn2").addEventListener("click",()=>{
+    expression += "2";
+    display.innerText = expression;
+});
+
+document.getElementById("btn3").addEventListener("click",()=>{
+    expression += "3";
+    display.innerText = expression;
+});
+
+document.getElementById("btn4").addEventListener("click",()=>{
+    expression += "4";
+    display.innerText = expression;
+});
+
+document.getElementById("btn5").addEventListener("click",()=>{
+    expression += "5";
+    display.innerText = expression;
+});
+
+document.getElementById("btn6").addEventListener("click", ()=>{
+    expression += "6";
+    display.innerText = expression;
+});
+
+document.getElementById("btn7").addEventListener("click", ()=>{
+    expression += "7";
+    display.innerText = expression;
+});
+
+document.getElementById("btn8").addEventListener("click", ()=>{
+    expression += "8";
+    display.innerText = expression;
+});
+
+document.getElementById("btn9").addEventListener("click",()=>{
+    expression += "9";
+    display.innerText = expression;
+});
+
+
+document.getElementById("add").addEventListener("click", ()=>{
+    expression += "+";
+    display.innerText = expression;
+});
+
+document.getElementById("sub").addEventListener("click",()=>{
+    expression += "-";
+    display.innerText = expression;
+});
+
+document.getElementById("mul").addEventListener("click", ()=>{
+    expression += "*";
+    display.innerText = expression;
+});
+
+document.getElementById("div").addEventListener("click", ()=>{
+    expression += "/";
+    display.innerText = expression;
+});
+
+document.getElementById("equal").addEventListener("click",()=>{
+    expression = eval(expression);
+    display.innerText = expression;
+});
+
+
+document.getElementById("clear").addEventListener("click",()=>{
+    expression = "";
+    display.innerText = "";
+});
+
+document.getElementById("delete").addEventListener("click",()=>{
+    expression = expression.slice(0, -1);
+    display.innerText = expression;
+
+});
+
+</script>
+</body>
+</html>
