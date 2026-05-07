@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee CRUD System</title>
+
+    <script>
+        function showFields(choice) {
+        
+            document.getElementById("idDiv").style.display = "none";
+            document.getElementById("nameDiv").style.display = "none";
+            document.getElementById("salaryDiv").style.display = "none";
+
+           
+            document.getElementById("id").required = false;
+            document.getElementById("name").required = false;
+            document.getElementById("salary").required = false;
+
+           
+            if (choice == "1") { 
+                idDiv.style.display = "block";
+                nameDiv.style.display = "block";
+                salaryDiv.style.display = "block";
+
+                id.required = true;
+                name.required = true;
+                salary.required = true;
+            }
+            else if (choice == "2") { 
+                idDiv.style.display = "block";
+
+                id.required = true;
+            }
+            else if (choice == "3") { 
+                idDiv.style.display = "block";
+                nameDiv.style.display = "block";
+                salaryDiv.style.display = "block";
+
+                id.required = true;
+                name.required = true;
+                salary.required = true;
+            }
+            else if (choice == "4") { 
+                
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+<h2>Employee CRUD Operations</h2>
+
+<form action="sample" method="post">
+
+    <label>Select Operation:</label>
+    <select name="ch" onchange="showFields(this.value)" required>
+        <option value="">--Select--</option>
+        <option value="1">Insert</option>
+        <option value="2">Delete</option>
+        <option value="3">Update</option>
+        <option value="4">Read</option>
+    </select>
+
+    <br><br>
+
+    <div id="idDiv" style="display:none;">
+        ID: <input type="text" id="id" name="id"><br><br>
+    </div>
+
+    <div id="nameDiv" style="display:none;">
+        Name: <input type="text" id="name" name="name"><br><br>
+    </div>
+
+    <div id="salaryDiv" style="display:none;">
+        Salary: <input type="text" id="salary" name="salary"><br><br>
+    </div>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
